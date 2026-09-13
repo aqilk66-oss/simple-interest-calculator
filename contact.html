@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - TravelBloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <style>
+        .contact-page-container {
+            padding: 50px 80px 80px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #38bdf8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 40px;
+        }
+        .contact-info-card, .contact-form-card {
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 36px;
+            backdrop-filter: blur(12px);
+        }
+        .contact-info-card h2, .contact-form-card h2 {
+            color: #f8fafc;
+            font-size: 1.6rem;
+            margin-bottom: 16px;
+        }
+        .contact-info-card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 20px;
+            color: #e2e8f0;
+        }
+        .info-item i {
+            font-size: 1.4rem;
+            color: #38bdf8;
+            width: 30px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #e2e8f0;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.95);
+            color: #0f172a;
+            font-size: 1rem;
+            outline: none;
+            box-sizing: border-box;
+        }
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background: #0ea5e9;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .btn-submit:hover {
+            background: #0284c7;
+        }
+        .status-msg {
+            margin-top: 15px;
+            color: #4ade80;
+            font-weight: 600;
+            display: none;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with 6 required elements -->
+    <nav class="navbar">
+        <div class="logo-section">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>TravelBloom</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html" class="active">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            </div>
+            <button type="button" id="btnSearch">Search</button>
+            <button type="button" id="btnClear">Clear</button>
+        </div>
+    </nav>
+
+    <aside class="social-sidebar">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </aside>
+
+    <div class="contact-page-container">
+        <h1 class="page-title">CONTACT US</h1>
+
+        <div class="contact-layout">
+            <div class="contact-info-card">
+                <h2>Get in Touch</h2>
+                <p>Have questions, feedback, or need personalized travel advice? Reach out to the TravelBloom team through our contact form or contact channels below.</p>
+                
+                <div class="info-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>contact@travelbloom.com</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>+1 (800) 555-BLOOM</span>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>Global Travel Headquarters, New York, NY</span>
+                </div>
+            </div>
+
+            <div class="contact-form-card">
+                <h2>Send Us a Message</h2>
+                <form id="contactForm" onsubmit="event.preventDefault(); document.getElementById('statusMsg').style.display='block'; this.reset();">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message or inquiry here..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Submit Message</button>
+                    <div id="statusMsg" class="status-msg">Thank you! Your message has been sent successfully.</div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

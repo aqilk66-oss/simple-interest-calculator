@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBloom - Travel Recommendation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="travel_recommendation.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo-section">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>TravelBloom</span>
+        </div>
+        <div class="nav-links">
+            <a href="travel_recommendation.html" class="active">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" value="beach" placeholder="Enter a destination or keyword">
+            </div>
+            <button type="button" id="btnSearch">Search</button>
+            <button type="button" id="btnClear">Clear</button>
+        </div>
+    </nav>
+
+    <aside class="social-sidebar">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </aside>
+
+    <main class="main-container">
+        <section class="hero-section">
+            <h1>EXPLORE<br>DREAM<br>DESTINATION</h1>
+            <p>It encourages exploration of unfamiliar territories, embracing diverse cultures, landscapes, and breathtaking beaches across the globe.</p>
+            <a href="#" class="btn-book">BOOK NOW</a>
+        </section>
+
+        
+        <section id="resultsContainer" class="results-container">
+            <div class="recommendation-card">
+                <div class="card-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&auto=format&fit=crop&q=80" alt="Bora Bora, French Polynesia">
+                </div>
+                <div class="card-body">
+                    <h3>Bora Bora, French Polynesia</h3>
+                    <p>An iconic tropical island surrounded by sand-fringed motus and a turquoise lagoon protected by a coral reef.</p>
+                    <a href="#" class="btn-visit">Visit</a>
+                </div>
+            </div>
+            <div class="recommendation-card">
+                <div class="card-image-wrap">
+                    <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?w=600&auto=format&fit=crop&q=80" alt="Copacabana Beach, Brazil">
+                </div>
+                <div class="card-body">
+                    <h3>Copacabana Beach, Brazil</h3>
+                    <p>A world-famous crescent-shaped beach located in the vibrant city of Rio de Janeiro, known for its lively atmosphere.</p>
+                    <a href="#" class="btn-visit">Visit</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>

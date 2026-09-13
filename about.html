@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - TravelBloom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="travel_recommendation.css">
+    <style>
+        .about-page-container {
+            padding: 50px 80px 80px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .page-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #38bdf8;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .company-info-card {
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 36px;
+            backdrop-filter: blur(12px);
+            margin-bottom: 40px;
+            line-height: 1.7;
+            color: #cbd5e1;
+        }
+        .company-info-card h2 {
+            color: #f8fafc;
+            font-size: 1.8rem;
+            margin-bottom: 14px;
+        }
+        .company-info-card p {
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+        .team-section h2 {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            color: #f8fafc;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .team-card {
+            background: rgba(15, 23, 42, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 16px;
+            padding: 28px;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+        .team-card .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #0284c7;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 18px;
+            font-size: 2rem;
+            color: white;
+        }
+        .team-card h3 {
+            color: #f8fafc;
+            font-size: 1.3rem;
+            margin-bottom: 6px;
+        }
+        .team-card .role {
+            color: #38bdf8;
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .team-card p {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar with 6 required elements -->
+    <nav class="navbar">
+        <div class="logo-section">
+            <i class="fa-solid fa-plane-departure"></i>
+            <span>TravelBloom</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="search-container">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Enter a destination or keyword">
+            </div>
+            <button type="button" id="btnSearch">Search</button>
+            <button type="button" id="btnClear">Clear</button>
+        </div>
+    </nav>
+
+    <aside class="social-sidebar">
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </aside>
+
+    <div class="about-page-container">
+        <h1 class="page-title">ABOUT US</h1>
+
+        <section class="company-info-card">
+            <h2>Our Mission & Purpose</h2>
+            <p>Welcome to <strong>TravelBloom</strong>, your premier destination for personalized travel recommendations and exploration. Our mission is to inspire, empower, and simplify travel for wanderers across the globe. Whether you crave tranquil beach getaways, majestic sacred temples, or culturally rich cities, we curate unforgettable travel experiences tailored to your desires.</p>
+            <p>We believe travel bridges cultures, enriches perspectives, and brings our global community together. By providing intuitive discovery tools and verified destination insights, TravelBloom helps travelers turn dream journeys into reality.</p>
+        </section>
+
+        <section class="team-section">
+            <h2>Our Team & Leadership</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="avatar"><i class="fa-solid fa-user-tie"></i></div>
+                    <h3>Muhammad Aqil Khan</h3>
+                    <div class="role">Founder & Lead Developer</div>
+                    <p>Responsible for platform architecture, front-end engineering, and responsive user experience design.</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar"><i class="fa-solid fa-compass"></i></div>
+                    <h3>Sarah Jenkins</h3>
+                    <div class="role">Head of Travel Curation</div>
+                    <p>Oversees destination research, cultural verification, and curated beach & temple recommendations.</p>
+                </div>
+                <div class="team-card">
+                    <div class="avatar"><i class="fa-solid fa-headset"></i></div>
+                    <h3>David Martinez</h3>
+                    <div class="role">Customer Experience Lead</div>
+                    <p>Dedicated to supporting travelers, managing feedback, and maintaining our high service standards.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="travel_recommendation.js"></script>
+</body>
+</html>
